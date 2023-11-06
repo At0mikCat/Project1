@@ -7,12 +7,10 @@ public class Personaje : MonoBehaviour
     [SerializeField] private float Rotspeed;
     [SerializeField] private float Speed;
     private Rigidbody Rb;
-    // Start is called before the first frame update
-    void Start()
-    {
-        GetComponent<Rigidbody>();
-        
 
+    private void Awake()
+    {
+        Rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
