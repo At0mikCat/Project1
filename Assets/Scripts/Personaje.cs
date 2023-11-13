@@ -6,6 +6,7 @@ public class Personaje : MonoBehaviour
 {
     [SerializeField] private float Rotspeed;
     [SerializeField] private float Speed;
+
     private Rigidbody Rb;
 
     private void Awake()

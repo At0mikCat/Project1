@@ -7,6 +7,7 @@ public class Detector : MonoBehaviour
     public GameObject Statues;
     public GameObject GM;
     public GameManager GameManager;
+    bool Counted = false;
 
     private void Awake()
     {
@@ -14,10 +15,20 @@ public class Detector : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Statue")
+        if((other.gameObject.tag == "Statue") && !Counted)
         {
             Debug.Log("Hola");
             GameManager.Count();
+            Counted = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if ((other.gameObject.tag == "Statue") && Counted)
+        {
+            Debug.Log("Hola");
+            GameManager.Discount();
+            Counted = false;
         }
     }
     private void OnTriggerStay(Collider other)
