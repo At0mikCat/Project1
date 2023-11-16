@@ -11,7 +11,7 @@ public class DragTask3 : MonoBehaviour
     public GameObject GM;
     public GameManager GameManager;
     bool Snaped;
-    float SnapDistance = 8;
+    float SnapDistance = 12;
 
     private void Awake()
     {
