@@ -10,7 +10,7 @@ public class MenúInicio : MonoBehaviour
 
 
     public void PlayGameButton(){
-        SceneManager.LoadScene("Juego");
+        SceneManager.LoadScene("Game Core");
     }
     public void OptionsButton(){
     

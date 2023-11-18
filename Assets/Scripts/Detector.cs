@@ -22,15 +22,7 @@ public class Detector : MonoBehaviour
             Counted = true;
         }
     }
-    private void OnTriggerExit(Collider other)
-    {
-        if ((other.gameObject.tag == "Statue") && Counted)
-        {
-            Debug.Log("Hola");
-            GameManager.Discount();
-            Counted = false;
-        }
-    }
+
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Player")
@@ -39,6 +31,15 @@ public class Detector : MonoBehaviour
             {
                 Statues.transform.Rotate(0, 5, 0);
             }
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if ((other.gameObject.tag == "Statue") && Counted)
+        {
+            Debug.Log("Hola");
+            GameManager.Discount();
+            Counted = false;
         }
     }
 }

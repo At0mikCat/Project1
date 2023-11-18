@@ -28,10 +28,7 @@ public class DragTask2 : MonoBehaviour
         if (Vector3.Distance(PosicionPieza.position, Target.position) < SnapDistance)
         {
             transform.position = Target.position;
-            GameManager.SnapCount();
             Snaped = true;
-
-
         }
     }
     public void DragHandler(BaseEventData data)
@@ -42,11 +39,12 @@ public class DragTask2 : MonoBehaviour
         }
         PointerEventData pointerData = (PointerEventData)data;
         Vector2 position;
+
+        GameManager.SnapCount();
         RectTransformUtility.ScreenPointToLocalPointInRectangle((RectTransform)canvas.transform, 
             pointerData.position, 
             canvas.worldCamera, 
             out position);
-
         transform.position = canvas.transform.TransformPoint(position);
 
     }

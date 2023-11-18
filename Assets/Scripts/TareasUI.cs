@@ -19,6 +19,7 @@ public class TareasUI : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Z))
             {
+                Time.timeScale = 0;
                 Tarea.gameObject.SetActive(true);
             }
         }
@@ -30,6 +31,7 @@ public class TareasUI : MonoBehaviour
 
     public void Exit()
     {
+        Time.timeScale = 1;
         Tarea.gameObject.SetActive(false);
     }
 }

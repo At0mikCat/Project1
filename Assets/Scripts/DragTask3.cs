@@ -45,6 +45,7 @@ public class DragTask3 : MonoBehaviour
             pointerData.position, 
             canvas.worldCamera, 
             out position);
+        GameManager.SnapCountTask3();
 
         transform.position = canvas.transform.TransformPoint(position);
 
