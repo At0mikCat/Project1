@@ -20,6 +20,8 @@ public class Personaje : MonoBehaviour
 
     private Rigidbody Rb;
 
+    public GameObject A;
+
     private void Awake()
     {
         Time.timeScale = 1;
@@ -29,19 +31,18 @@ public class Personaje : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float h = Input.GetAxis("Horizontal") * Rotspeed * Time.deltaTime;
-        transform.Rotate(0, h, 0);
+        float h = Input.GetAxis("Horizontal") * Speed * Time.deltaTime;
         float v = Input.GetAxis("Vertical") * Speed * Time.deltaTime;
-        transform.Translate(0, 0, v);
+        transform.Translate(h, 0, v);
 
         if (Input.GetKey(KeyCode.LeftShift) && !staminaOff)
         {
-            transform.Translate(0, 0, runSpeed * Time.deltaTime);
+            Speed = 4f;
             StaminaBar.fillAmount -= 0.3f * Time.deltaTime;
         }
         else
         {
-            transform.Translate(0, 0, v);
+            Speed = 3.4f;
             StaminaBar.fillAmount += 0.1f * Time.deltaTime;
         }
 
@@ -53,6 +54,7 @@ public class Personaje : MonoBehaviour
 
         if(invincible)
         {
+            A.SetActive(false);
             StartCoroutine(Invincible());
         }
     }
@@ -75,7 +77,7 @@ public class Personaje : MonoBehaviour
                 Heart1.gameObject.SetActive(false);
                 //show death panel
                 Time.timeScale = 0;
-            }
+            }        
         }
     }
 
@@ -83,6 +85,7 @@ public class Personaje : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         invincible = false;
+        A.SetActive(true);
     }
 
     IEnumerator Stamina()
