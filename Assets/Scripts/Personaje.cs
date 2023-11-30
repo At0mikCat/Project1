@@ -57,9 +57,9 @@ public class Personaje : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Monster") && !invincible)
+        if (other.gameObject.CompareTag("Monster") && !invincible)
         {
             invincible = true;
             if (Heart3.gameObject.activeSelf == true)
