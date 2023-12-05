@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Personaje : MonoBehaviour
 {
-    [SerializeField] private float Rotspeed;
     [SerializeField] private float Speed;
     [SerializeField] private float runSpeed;
 
@@ -83,7 +82,7 @@ public class Personaje : MonoBehaviour
 
     IEnumerator Invincible()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         invincible = false;
         A.SetActive(true);
     }

@@ -55,7 +55,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_UseGravity
-    path: BreakableWall.002_cell.005
+    path: BrokenWall_cell.007
     classID: 54
     script: {fileID: 0}
     flags: 0
@@ -76,7 +76,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_UseGravity
-    path: BreakableWall.002_cell.002
+    path: BrokenWall_cell.006
     classID: 54
     script: {fileID: 0}
     flags: 0
@@ -97,7 +97,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_UseGravity
-    path: BreakableWall.002_cell.004
+    path: BrokenWall_cell.005
     classID: 54
     script: {fileID: 0}
     flags: 0
@@ -118,7 +118,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_UseGravity
-    path: BreakableWall.002_cell
+    path: BrokenWall_cell.003
     classID: 54
     script: {fileID: 0}
     flags: 0
@@ -139,7 +139,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_UseGravity
-    path: BreakableWall.002_cell.007
+    path: BrokenWall_cell.002
     classID: 54
     script: {fileID: 0}
     flags: 0
@@ -160,7 +160,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_UseGravity
-    path: BreakableWall.002_cell.003
+    path: BrokenWall_cell.001
     classID: 54
     script: {fileID: 0}
     flags: 0
@@ -181,7 +181,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_UseGravity
-    path: BreakableWall.002_cell.006
+    path: BrokenWall_cell
     classID: 54
     script: {fileID: 0}
     flags: 0
@@ -203,7 +203,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 3821593663
+      path: 2476310435
       attribute: 549084653
       script: {fileID: 0}
       typeID: 54
@@ -212,7 +212,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 2108453276
+      path: 3835580213
       attribute: 549084653
       script: {fileID: 0}
       typeID: 54
@@ -221,7 +221,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 2496648361
+      path: 2107055759
       attribute: 549084653
       script: {fileID: 0}
       typeID: 54
@@ -230,7 +230,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 1331781822
+      path: 2499066810
       attribute: 549084653
       script: {fileID: 0}
       typeID: 54
@@ -239,7 +239,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 231114003
+      path: 3824388908
       attribute: 549084653
       script: {fileID: 0}
       typeID: 54
@@ -248,7 +248,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 178995466
+      path: 2063260310
       attribute: 549084653
       script: {fileID: 0}
       typeID: 54
@@ -257,7 +257,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 2059515269
+      path: 1234375417
       attribute: 549084653
       script: {fileID: 0}
       typeID: 54
@@ -325,7 +325,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_UseGravity
-    path: BreakableWall.002_cell.005
+    path: BrokenWall_cell.007
     classID: 54
     script: {fileID: 0}
     flags: 0
@@ -346,7 +346,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_UseGravity
-    path: BreakableWall.002_cell.002
+    path: BrokenWall_cell.006
     classID: 54
     script: {fileID: 0}
     flags: 0
@@ -367,7 +367,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_UseGravity
-    path: BreakableWall.002_cell.004
+    path: BrokenWall_cell.005
     classID: 54
     script: {fileID: 0}
     flags: 0
@@ -388,7 +388,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_UseGravity
-    path: BreakableWall.002_cell
+    path: BrokenWall_cell.003
     classID: 54
     script: {fileID: 0}
     flags: 0
@@ -409,7 +409,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_UseGravity
-    path: BreakableWall.002_cell.007
+    path: BrokenWall_cell.002
     classID: 54
     script: {fileID: 0}
     flags: 0
@@ -430,7 +430,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_UseGravity
-    path: BreakableWall.002_cell.003
+    path: BrokenWall_cell.001
     classID: 54
     script: {fileID: 0}
     flags: 0
@@ -451,7 +451,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_UseGravity
-    path: BreakableWall.002_cell.006
+    path: BrokenWall_cell
     classID: 54
     script: {fileID: 0}
     flags: 0
