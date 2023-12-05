@@ -1247,33 +1247,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &873431599 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6982604572909971800, guid: d58c9ff247cc5d0498830cfec5abb7bc, type: 3}
-  m_PrefabInstance: {fileID: 1687308847}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &873431608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 873431599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb6a34d769a1e4ac7b0b30e433aa443c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1
-  smoothType: 0
-  subdivisions: 2
-  iterations: 2
-  strength: 0.5
-  uniformLength: 1
-  maxSegmentLength: 2
-  bezierTangentLength: 0.4
-  offset: 0.2
-  factor: 0.1
 --- !u!1001 &982213002
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2640,6 +2613,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 323691264}
+    - target: {fileID: 3539812797285654000, guid: d58c9ff247cc5d0498830cfec5abb7bc, type: 3}
+      propertyPath: startEndModifier.addPoints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3916823327635958887, guid: d58c9ff247cc5d0498830cfec5abb7bc, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -2684,6 +2661,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4070150274478121817, guid: d58c9ff247cc5d0498830cfec5abb7bc, type: 3}
+      propertyPath: pickNextWaypointDist
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6982604572909971800, guid: d58c9ff247cc5d0498830cfec5abb7bc, type: 3}
       propertyPath: m_Name
       value: Monster
@@ -2695,10 +2676,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6982604572909971800, guid: d58c9ff247cc5d0498830cfec5abb7bc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 873431608}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d58c9ff247cc5d0498830cfec5abb7bc, type: 3}
 --- !u!64 &1698523765
 MeshCollider:
@@ -4479,7 +4457,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3712031924438183538}
   m_LocalRotation: {x: 0.5, y: -0.49999997, z: -0.5, w: -0.5}
-  m_LocalPosition: {x: 11.942254, y: 2.61308, z: -12.638399}
+  m_LocalPosition: {x: 11.942254, y: 2.61308, z: -12.01}
   m_LocalScale: {x: 22.211033, y: 101.94882, z: 161.6636}
   m_ConstrainProportionsScale: 0
   m_Children: []
