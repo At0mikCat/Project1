@@ -6,12 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class MenúInicio : MonoBehaviour
 {
-    [SerializeField] GameObject PanelOpciones;
 
 
     public void PlayGameButton()
     {
         SceneManager.LoadScene("Game");
+    }
+
+    public void ReturnButon()
+    {
+        SceneManager.LoadScene("Menu");
     }
     
     public void ExitButton()

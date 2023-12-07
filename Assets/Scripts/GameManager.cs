@@ -13,9 +13,7 @@ public class GameManager : MonoBehaviour
     public GameObject PRISONFATHER;
     public AudioSource Click;
     public Image TutorialBack;
-    public GameObject Tarea1;
-    public GameObject Tarea2;
-    public GameObject Tarea3;
+    public Image monoUI;
 
     public float keys;
     public TextMeshProUGUI KeysText;
@@ -24,6 +22,9 @@ public class GameManager : MonoBehaviour
     public Image Check2;
     public Image Check3;
     public Image Check4;
+
+    public Image WINORLOSEPANNEL;
+    public TextMeshProUGUI WINORLOSETEXT;
 
     public TextMeshProUGUI ESCAPE;
     public GameObject FinalDoor;
@@ -93,6 +94,8 @@ public class GameManager : MonoBehaviour
         {
             remainingTime = 0;
             Time.timeScale = 0;
+            WINORLOSEPANNEL.gameObject.SetActive(true);
+            WINORLOSETEXT.text = "¡Se acabó el tiempo! Estas muerto";
         }
 
         int minutes = Mathf.FloorToInt(remainingTime / 60);
@@ -104,6 +107,31 @@ public class GameManager : MonoBehaviour
         if (remainingTime < 60)
         {
             Timer.color = Color.red;
+        }
+
+        if (count == 4)
+        {
+            Check1.gameObject.SetActive(true);
+            Destroy(ProtectorDestructableWallLeftRight);
+        }
+
+        if (contadorSnapTask2 == 5)
+        {
+            Check2.gameObject.SetActive(true);
+            Destroy(ProtectorDestructableWallCentre);
+        }
+
+        if (contadorSnapTask3 == 3)
+        {
+            Check3.gameObject.SetActive(true);
+            Destroy(ProtectorDestructableWallRight);
+        }
+
+        if (keys == 3)
+        {
+            Destroy(FinalDoor);
+            ESCAPE.text = "Escapa del laberinto antes que sea tarde";
+            //destroy door and change the message for ESCAPE;
         }
 
         if (remainingTime < 294 && Deactivator.GetComponent<DeactivateTutorial>().quierosalirayuaa == false)
@@ -118,36 +146,9 @@ public class GameManager : MonoBehaviour
     
         if (Deactivator.GetComponent<DeactivateTutorial>().quierosalirayuaa == true)
         {
+            monoUI.gameObject.SetActive(true);
             TUTORIAL.text = "¿Asi que quieres salir? Suerte, la necesitarás y recuerda prestar atención al minimapa";
             StartCoroutine(Wait());
-        }
-
-        if(count == 4)
-        {
-            Check1.gameObject.SetActive(true);
-            Tarea1.gameObject.SetActive(false);
-            Destroy(ProtectorDestructableWallLeftRight);
-        }
-
-        if(contadorSnapTask2 == 5)
-        {
-            Tarea2.gameObject.SetActive(false);
-            Check2.gameObject.SetActive(true);
-            Destroy(ProtectorDestructableWallCentre);
-        }
-
-        if(contadorSnapTask3 == 3)
-        {
-            Tarea3.gameObject.SetActive(false);
-            Check3.gameObject.SetActive(true);
-            Destroy(ProtectorDestructableWallRight);
-        }
-
-        if(keys == 3)
-        {
-            Destroy(FinalDoor);
-            ESCAPE.text = "Escapa del laberinto antes que sea tarde";
-            //destroy door and change the message for ESCAPE;
         }
 
         IEnumerator Wait()
