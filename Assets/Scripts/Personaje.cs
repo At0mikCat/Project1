@@ -7,6 +7,7 @@ public class Personaje : MonoBehaviour
 {
     [SerializeField] private float Speed;
     [SerializeField] private float runSpeed;
+    [SerializeField] private float RotSpeed;
 
     public Image StaminaBar;
 
@@ -32,9 +33,11 @@ public class Personaje : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float h = Input.GetAxis("Horizontal") * Speed * Time.deltaTime;
+        float h = Input.GetAxis("Horizontal") * RotSpeed * Time.deltaTime;
         float v = Input.GetAxis("Vertical") * Speed * Time.deltaTime;
-        transform.Translate(h, 0, v);
+        transform.Rotate(0, h, 0);
+        transform.Translate(0, 0, v);
+
 
         if (h != 0 || v != 0)
         {
