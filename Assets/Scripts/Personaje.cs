@@ -18,6 +18,7 @@ public class Personaje : MonoBehaviour
     bool staminaOff = false;
 
     private Rigidbody Rb;
+    private Animator animator;
 
     public GameObject A;
 
@@ -25,6 +26,7 @@ public class Personaje : MonoBehaviour
     {
         Time.timeScale = 1;
         Rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -34,13 +36,24 @@ public class Personaje : MonoBehaviour
         float v = Input.GetAxis("Vertical") * Speed * Time.deltaTime;
         transform.Translate(h, 0, v);
 
+        if (h != 0 || v != 0)
+        {
+            animator.SetBool("Idle?", false);
+        }
+        else
+        {
+            animator.SetBool("Idle?", true);
+        }
+
         if (Input.GetKey(KeyCode.LeftShift) && !staminaOff)
         {
+            animator.SetBool("isRunning", true);
             Speed = 4f;
             StaminaBar.fillAmount -= 0.3f * Time.deltaTime;
         }
         else
         {
+            animator.SetBool("isRunning", false);
             Speed = 3.4f;
             StaminaBar.fillAmount += 0.1f * Time.deltaTime;
         }
