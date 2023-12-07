@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class Personaje : MonoBehaviour
 {
     [SerializeField] private float Speed;
@@ -22,6 +22,8 @@ public class Personaje : MonoBehaviour
     private Animator animator;
 
     public GameObject A;
+    public Image WINORLOSEPANNEL;
+    public TextMeshProUGUI WINORLOSETEXT;
 
     private void Awake()
     {
@@ -37,7 +39,6 @@ public class Personaje : MonoBehaviour
         float v = Input.GetAxis("Vertical") * Speed * Time.deltaTime;
         transform.Rotate(0, h, 0);
         transform.Translate(0, 0, v);
-
 
         if (h != 0 || v != 0)
         {
@@ -92,7 +93,17 @@ public class Personaje : MonoBehaviour
                 Heart1.gameObject.SetActive(false);
                 //show death panel
                 Time.timeScale = 0;
+                WINORLOSEPANNEL.gameObject.SetActive(true);
+                WINORLOSETEXT.text = "Has muerto, ¡sigue intentando!";
             }        
+        }
+
+        if(other.gameObject.CompareTag("Win"))
+        {
+            //show win panel
+            Time.timeScale = 0;
+            WINORLOSEPANNEL.gameObject.SetActive(true);
+            WINORLOSETEXT.text = "¡Has ganado, ¡Pudiste escapar, felicitaciones!";
         }
     }
 

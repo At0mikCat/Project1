@@ -9,18 +9,13 @@ public class MenúInicio : MonoBehaviour
     [SerializeField] GameObject PanelOpciones;
 
 
-    public void PlayGameButton(){
-        SceneManager.LoadScene("Game Core");
-    }
-    public void OptionsButton(){
-    
-        PanelOpciones.SetActive(true);
-    }
-    public void QuitButtonOptions() {
-        PanelOpciones.SetActive(false);
+    public void PlayGameButton()
+    {
+        SceneManager.LoadScene("Game");
     }
     
-    public void ExitButton(){
+    public void ExitButton()
+    {
         Application.Quit();
     }
 }

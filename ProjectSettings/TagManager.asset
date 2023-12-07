@@ -9,6 +9,7 @@ TagManager:
   - Key
   - Task
   - Monster
+  - Win
   layers:
   - Default
   - TransparentFX
