@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
     public Image Check2;
     public Image Check3;
     public Image Check4;
+    public Image MarcadorSalida;
+    public GameObject Tareas;
 
     public Image WINORLOSEPANNEL;
     public TextMeshProUGUI WINORLOSETEXT;
@@ -50,7 +52,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        TUTORIAL.text = "¡Bienvenido! Estas escapando de un tronco poseído tras robarte un valioso artefacto, te hare recordar todas tus habilidades antes de escapar de el";
+        TUTORIAL.text = "¡Bienvenido! Estás escapando de un tronco poseído tras robarte un valioso artefacto, te haré recordar todas tus habilidades antes de escapar de el";
     }
 
     public void Count()
@@ -131,6 +133,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(FinalDoor);
             ESCAPE.text = "Escapa del laberinto antes que sea tarde";
+            MarcadorSalida.gameObject.SetActive(true);
+            Tareas.SetActive(false);
             //destroy door and change the message for ESCAPE;
         }
 
